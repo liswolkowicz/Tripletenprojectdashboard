@@ -16,12 +16,15 @@ if st.button("Mostrar histograma de precios"):
     fig = px.histogram(df, x="price", nbins=50, title="Histograma de precios")
     st.plotly_chart(fig)
 
-# Otra visualización adicional (no obligatoria, pero mejora el dashboard)
-fig2 = px.scatter(
-    df,
-    x="model_year",
-    y="price",
-    title="Precio por Año del Vehículo",
-    trendline="ols"
-)
-st.plotly_chart(fig2)
+st.write("### Precio por Año del Vehículo")
+
+if st.button("Mostrar gráfico de dispersión precio vs año"):
+    fig2 = px.scatter(
+        df,
+        x="model_year",
+        y="price",
+        title="Precio por Año del Vehículo",
+        trendline="ols"
+    )
+    st.plotly_chart(fig2)
+    
