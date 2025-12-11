@@ -17,3 +17,5 @@ source .venv/bin/activate   # activar entorno virtual
 pip install -r requirements.txt
 streamlit run app.py
 
+### 🚀 App desplegada en Render
+https://tripletenprojectdashboard.onrender.com
